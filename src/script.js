@@ -167,7 +167,7 @@ scene.add(sphere);
 
 // ground
 const groundTexture = textureLoader.load('textures/ALS-ground.png');
-const groundMaterial = new THREE.MeshStandardMaterial({map: groundTexture});
+const groundMaterial = new THREE.MeshStandardMaterial({map: groundTexture, color: 0xfaf0e6});
 
 const ground = new THREE.Mesh(
   new THREE.PlaneBufferGeometry(30, 30),
