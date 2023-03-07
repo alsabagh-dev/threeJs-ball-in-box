@@ -166,9 +166,8 @@ sphere.castShadow = true;
 scene.add(sphere);
 
 // ground
-const wallTexture = textureLoader.load('textures/ALS-wall.png');
-const wallMaterial = new THREE.MeshStandardMaterial({map: wallTexture});
-const groundMaterial = new THREE.MeshStandardMaterial({color: 0xfaf0e6});
+const groundTexture = textureLoader.load('textures/ALS-ground.png');
+const groundMaterial = new THREE.MeshStandardMaterial({map: groundTexture});
 
 const ground = new THREE.Mesh(
   new THREE.PlaneBufferGeometry(30, 30),
@@ -179,6 +178,13 @@ ground.position.y = -1.501;
 ground.receiveShadow = true;
 scene.add(ground)
 
+
+// Walls
+const wallTexture = textureLoader.load('textures/ALS-wall.png');
+const wallMaterial = new THREE.MeshStandardMaterial({map: wallTexture});
+/**
+ * Front Wall
+ */
 const fWall = new THREE.Mesh(
   new THREE.PlaneBufferGeometry(30, 15),
   wallMaterial  
