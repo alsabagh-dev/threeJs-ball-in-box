@@ -26,6 +26,12 @@ const params = {
  */
 const loadingManager = new THREE.LoadingManager();
 
+const spinner = document.querySelector('.spinner');
+
+loadingManager.onLoad = () => {
+  spinner.style.display = 'none'; 
+}
+
 const textureLoader = new THREE.TextureLoader(loadingManager);
 const MaterialTextures = {
   wood: textureLoader.load('/textures/ALS-wood.png'),
@@ -169,7 +175,7 @@ const ground = new THREE.Mesh(
   groundMaterial  
 )
 ground.rotation.x = -0.5 * Math.PI;
-ground.position.y = -1.60;
+ground.position.y = -1.501;
 ground.receiveShadow = true;
 scene.add(ground)
 
@@ -177,7 +183,7 @@ const fWall = new THREE.Mesh(
   new THREE.PlaneBufferGeometry(30, 15),
   wallMaterial  
 )
-fWall.position.y = 5.9;
+fWall.position.y = 5.999;
 fWall.position.z = -15;
 
 scene.add(fWall)
@@ -188,7 +194,7 @@ const RWall = new THREE.Mesh(
 )
 RWall.rotation.y = -0.5*Math.PI;
 RWall.position.x = 15
-RWall.position.y = 5.9;
+RWall.position.y = 5.999;
 
 scene.add(RWall)
 
@@ -198,7 +204,7 @@ const LWall = new THREE.Mesh(
 )
 LWall.rotation.y = 0.5*Math.PI;
 LWall.position.x = -15
-LWall.position.y = 5.9;
+LWall.position.y = 5.999;
 
 scene.add(LWall)
 
@@ -209,7 +215,7 @@ const BWall = new THREE.Mesh(
 )
 BWall.rotation.x = Math.PI;
 BWall.position.z = 15
-BWall.position.y = 5.9;
+BWall.position.y = 5.999;
 
 scene.add(BWall)
 
