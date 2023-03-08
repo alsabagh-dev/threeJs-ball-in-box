@@ -87,7 +87,7 @@ const canvas = document.querySelector('canvas.webgl');
 // Scene
 const scene = new THREE.Scene();
 
-const skyTexture = textureLoader.load('/textures/ALS-sky.png');
+const skyTexture = textureLoader.load('/textures/ALS-sky.jpg');
 
 scene.background = skyTexture;
 
@@ -180,7 +180,7 @@ scene.add(ground)
 
 
 // Walls
-const wallTexture = textureLoader.load('textures/ALS-wall.png');
+const wallTexture = textureLoader.load('textures/ALS-wall.jpg');
 const wallMaterial = new THREE.MeshStandardMaterial({map: wallTexture});
 /**
  * Front Wall
